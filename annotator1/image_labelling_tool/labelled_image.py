@@ -18,8 +18,8 @@ from PIL import Image
 from skimage.util import img_as_ubyte
 from skimage import transform
 from image_labelling_tool.labelling_tool import WrappedImageLabels, ImageLabels, LabelClass
-
-
+import PIL
+PIL.Image.MAX_IMAGE_PIXELS = 933120000
 PathType = Union[pathlib.Path, str]
 
 
