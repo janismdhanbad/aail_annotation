@@ -437,9 +437,9 @@ def flask_labeller_and_schema_editor(labelled_images: Sequence[labelled_image.La
         return response
         
     if socketio is not None:
-        socketio.run(app, debug=debug, port=8080,host='0.0.0.0', use_reloader=use_reloader)
+        socketio.run(app, debug=debug, port=8888,host='0.0.0.0', use_reloader=use_reloader)
     else:
-        app.run(debug=debug, port=8080, host='0.0.0.0', use_reloader=use_reloader, extra_files=extra_files)
+        app.run(debug=debug, port=8888, host='0.0.0.0', use_reloader=use_reloader, extra_files=extra_files)
 
 
 
