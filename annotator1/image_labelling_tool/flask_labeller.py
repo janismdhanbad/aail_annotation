@@ -309,9 +309,9 @@ def flask_labeller(labelled_images: Sequence[labelled_image.LabelledImage],
     _register_labeller_routes(app, socketio, socketio_emit, images_table, dextr_fn)
  
     if socketio is not None:
-        socketio.run(app, debug=debug, port=8080, host='0.0.0.0',use_reloader=use_reloader)
+        socketio.run(app, debug=debug, port=8888, host='0.0.0.0',use_reloader=use_reloader)
     else:
-        app.run(debug=debug, port=8080, host='0.0.0.0', use_reloader=use_reloader)
+        app.run(debug=debug, port=8888, host='0.0.0.0', use_reloader=use_reloader)
 
 global extra_files
 extra_files = []
