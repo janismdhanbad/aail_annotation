@@ -26,6 +26,9 @@ import sys
 import pdb
 # pdb.set_trace()
 sys.path.append("")
+import os
+fl_name = os.path.abspath(__file__)
+sys.path.append("/".join(fl_name.replace("\\","/").split("/")[:-1])+"/..")
 from typing import Any, Optional, Sequence, Mapping, Callable, Union
 import pathlib
 import binascii
@@ -434,9 +437,9 @@ def flask_labeller_and_schema_editor(labelled_images: Sequence[labelled_image.La
         return response
         
     if socketio is not None:
-        socketio.run(app, debug=debug, port=8888,host='0.0.0.0', use_reloader=use_reloader)
+        socketio.run(app, debug=debug, port=8080,host='0.0.0.0', use_reloader=use_reloader)
     else:
-        app.run(debug=debug, port=8888, host='0.0.0.0', use_reloader=use_reloader, extra_files=extra_files)
+        app.run(debug=debug, port=8080, host='0.0.0.0', use_reloader=use_reloader, extra_files=extra_files)
 
 
 

@@ -26,6 +26,9 @@ import sys
 import pdb
 # pdb.set_trace()
 sys.path.append("")
+import os
+fl_name = os.path.abspath(__file__)
+sys.path.append("/".join(fl_name.replace("\\","/").split("/")[:-1])+"/..")
 from typing import Any, Optional, Sequence, Mapping, Callable, Union
 import pathlib
 import binascii
