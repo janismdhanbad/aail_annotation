@@ -566,9 +566,8 @@ def run_app(images_dir, images_pat, labels_dir, readonly, update_label_object_id
     config = labelling_tool.DEFAULT_CONFIG
 
     tasks = [
-        dict(name='finished', human_name='[old] finished'),
-        dict(name='segmentation', human_name='Outlines'),
-        dict(name='classification', human_name='Classification'),
+        dict(name='apartments', human_name='Apartments'),
+        dict(name='houses', human_name='Houses')
     ]
     import pdb
     # pdb.set_trace()
