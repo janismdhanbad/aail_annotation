@@ -578,4 +578,5 @@ def run_app(images_dir, images_pat, labels_dir, readonly, update_label_object_id
 if __name__ == '__main__':
     run_app()
 
+
     
